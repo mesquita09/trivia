@@ -26,7 +26,7 @@ class _TriviaScreenState extends State<TriviaScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Pergunta 01',
+                  'PERGUNTA 01',
                   style: TextStyle(fontSize: 16),
                 ),
                 SizedBox(height: 16),
@@ -36,7 +36,27 @@ class _TriviaScreenState extends State<TriviaScreen> {
                 ),
               ],
             ),
-          )
+          ),
+          Expanded(
+            child: ListView(
+              children: [
+                Container(
+                  height: 80,
+                  margin: EdgeInsets.fromLTRB(32, 10, 32, 10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.15),
+                        spreadRadius: 2,
+                        blurRadius: 3,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
