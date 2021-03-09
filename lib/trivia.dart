@@ -6,6 +6,8 @@ class TriviaScreen extends StatefulWidget {
 }
 
 class _TriviaScreenState extends State<TriviaScreen> {
+  int answer = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +43,6 @@ class _TriviaScreenState extends State<TriviaScreen> {
             child: ListView(
               children: [
                 Container(
-                  height: 80,
                   margin: EdgeInsets.fromLTRB(32, 10, 32, 10),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
@@ -50,8 +51,43 @@ class _TriviaScreenState extends State<TriviaScreen> {
                         color: Colors.grey.withOpacity(0.15),
                         spreadRadius: 2,
                         blurRadius: 3,
+                        offset: Offset(1, 3),
                       ),
                     ],
+                  ),
+                  child: RadioListTile(
+                    value: 1,
+                    groupValue: answer,
+                    title: Text('resposta 01'),
+                    onChanged: (int value) {
+                      setState(() {
+                        answer = value;
+                      });
+                    },
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(32, 10, 32, 10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.15),
+                        spreadRadius: 2,
+                        blurRadius: 3,
+                        offset: Offset(1, 3),
+                      ),
+                    ],
+                  ),
+                  child: RadioListTile(
+                    value: 2,
+                    groupValue: answer,
+                    title: Text('resposta 02'),
+                    onChanged: (int value) {
+                      setState(() {
+                        answer = value;
+                      });
+                    },
                   ),
                 ),
               ],
