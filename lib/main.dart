@@ -9,6 +9,9 @@ void main() {
 class Trivia extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Welcome());
+    return MaterialApp(
+      home: Welcome(),
+      debugShowCheckedModeBanner: false,
+    );
   }
 }

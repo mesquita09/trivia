@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trivia/trivia.dart';
 
 class Welcome extends StatelessWidget {
   @override
@@ -20,7 +21,8 @@ class Welcome extends StatelessWidget {
           SizedBox(height: 88.0),
           TextButton(
             onPressed: () {
-              print('comecar');
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => TriviaScreen()));
             },
             child: Padding(
               padding: const EdgeInsets.fromLTRB(60, 11, 60, 11),
