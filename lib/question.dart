@@ -14,12 +14,22 @@ class Question {
 
     questions.add(
       Question(
-        'O que é Flutter',
+        'O que é Flutter?',
         'Novo smartphone',
         'Um SO',
         'SDK de desenvolvimento multiplataforma',
         'Serviço google',
         3,
+      ),
+    );
+    questions.add(
+      Question(
+        'Qual Linguagem o Flutter usa?',
+        'Dart',
+        'Java',
+        'Javascript',
+        'Python',
+        1,
       ),
     );
     return questions;
